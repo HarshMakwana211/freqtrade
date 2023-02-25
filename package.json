@@ -1,0 +1,42 @@
+{
+  "private": true,
+  "name": "my-nextron-app",
+  "description": "My application description",
+  "version": "1.0.0",
+  "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
+  "main": "app/background.js",
+  "scripts": {
+    "dev": "nextron",
+    "build": "nextron build",
+    "postinstall": "electron-builder install-app-deps",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "start": "electron-forge start",
+    "package": "electron-forge package"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@heroicons/react": "^1.0.6",
+    "antd": "^5.2.2",
+    "electron-serve": "^1.1.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.1.0",
+    "moment": "^2.29.4",
+    "rsuite": "^5.28.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.5",
+    "@electron-forge/maker-deb": "^6.0.5",
+    "@electron-forge/maker-rpm": "^6.0.5",
+    "@electron-forge/maker-squirrel": "^6.0.5",
+    "@electron-forge/maker-zip": "^6.0.5",
+    "autoprefixer": "^10.4.13",
+    "electron": "^21.3.3",
+    "next": "^12.3.4",
+    "nextron": "^8.5.0",
+    "postcss": "^8.4.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.7"
+  }
+}
