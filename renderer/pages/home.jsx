@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Greenup from '../components/icons/Greenup';
-import RedDown from '../components/icons/reddown';
-import TableRow from '../components/TableRow';
+import React, { useState } from "react";
+import Head from "next/head";
+import Greenup from "../components/icons/Greenup";
+import RedDown from "../components/icons/reddown";
+import TableRow from "../components/TableRow";
 
 function Home() {
   const [volume, setVolume] = useState("20,000");
@@ -21,10 +21,10 @@ function Home() {
       earned: {
         value: "300.84",
         isUp: true,
-        percentage: "5.92"
+        percentage: "5.92",
       },
       comcut: "20",
-      lastUpdated: "20 Feb 2023"
+      lastUpdated: "20 Feb 2023",
     },
     {
       name: "Anish",
@@ -36,10 +36,10 @@ function Home() {
       earned: {
         value: "323.84",
         isUp: false,
-        percentage: "5.92"
+        percentage: "5.92",
       },
       comcut: "20",
-      lastUpdated: "20 Feb 2023"
+      lastUpdated: "20 Feb 2023",
     },
     {
       name: "Anish",
@@ -51,10 +51,10 @@ function Home() {
       earned: {
         value: "323.84",
         isUp: true,
-        percentage: "5.92"
+        percentage: "5.92",
       },
       comcut: "20",
-      lastUpdated: "20 Feb 2023"
+      lastUpdated: "20 Feb 2023",
     },
     {
       name: "Anish",
@@ -66,68 +66,95 @@ function Home() {
       earned: {
         value: "323.84",
         isUp: false,
-        percentage: "5.92"
+        percentage: "5.92",
       },
       comcut: "20",
-      lastUpdated: "20 Feb 2023"
-    }
-  ]
+      lastUpdated: "20 Feb 2023",
+    },
+  ];
   return (
     <React.Fragment>
       <Head>
         <title>freqtradebot</title>
       </Head>
-      <div className='my-3 px-3'>
-        <div className='max-w-[1296px] w-full px-6 py-6 border border-gray-600 mx-auto flex justify-between rounded-md'>
+      <div className="my-3 px-3">
+        <div className="max-w-[1296px] w-full px-6 py-6 border border-gray-600 mx-auto flex justify-between rounded-md">
           <div>
-            <h4 className='font-[700] mb-1 text-[16px] leading-[150%] text-[#6C757D]'>Total Volume</h4>
-            <div className='flex gap-1'>
-              <h1 className='leading-[120%] text-[24px] font-[500]'>${volume}</h1>
-              <div className='flex items-center'>
+            <h4 className="font-[700] mb-1 text-[16px] leading-[150%] text-[#6C757D]">
+              Total Volume
+            </h4>
+            <div className="flex gap-1">
+              <h1 className="leading-[120%] text-[24px] font-[500]">
+                ${volume}
+              </h1>
+              <div className="flex items-center">
                 <Greenup />
-                <p className='text-[#198754] leading-[150%] text-[16px]'>2%</p>
+                <p className="text-[#198754] leading-[150%] text-[16px]">2%</p>
               </div>
             </div>
           </div>
           <div>
-            <h4 className='font-[700] mb-1 text-[16px] leading-[150%] text-[#6C757D]'>Profit Gained</h4>
-            <div className='flex gap-1'>
-              <h1 className='leading-[120%] text-[24px] font-[500]'>${profitGained}</h1>
-              <div className='flex items-center'>
+            <h4 className="font-[700] mb-1 text-[16px] leading-[150%] text-[#6C757D]">
+              Profit Gained
+            </h4>
+            <div className="flex gap-1">
+              <h1 className="leading-[120%] text-[24px] font-[500]">
+                ${profitGained}
+              </h1>
+              <div className="flex items-center">
                 <RedDown />
-                <p className='text-[#DC3545] leading-[150%] text-[16px]'>-2%</p>
+                <p className="text-[#DC3545] leading-[150%] text-[16px]">-2%</p>
               </div>
             </div>
           </div>
           <div>
-            <h4 className='font-[700] mb-1 text-[16px] leading-[150%] text-[#6C757D]'>Profit Gained</h4>
-            <div className='flex gap-1'>
-              <h1 className='leading-[120%] text-[24px] font-[500]'>${eth}</h1>
-              <div className='flex items-center'>
+            <h4 className="font-[700] mb-1 text-[16px] leading-[150%] text-[#6C757D]">
+              Profit Gained
+            </h4>
+            <div className="flex gap-1">
+              <h1 className="leading-[120%] text-[24px] font-[500]">${eth}</h1>
+              <div className="flex items-center">
                 <RedDown />
-                <p className='text-[#DC3545] leading-[150%] text-[16px]'>-2%</p>
+                <p className="text-[#DC3545] leading-[150%] text-[16px]">-2%</p>
               </div>
             </div>
           </div>
           <div>
-            <h4 className='font-[700] mb-1 text-[16px] leading-[150%] text-[#6C757D]'>Profit Gained</h4>
-            <div className='flex gap-1'>
-              <h1 className='leading-[120%] text-[24px] font-[500]'>${btc}</h1>
-              <div className='flex items-center'>
+            <h4 className="font-[700] mb-1 text-[16px] leading-[150%] text-[#6C757D]">
+              Profit Gained
+            </h4>
+            <div className="flex gap-1">
+              <h1 className="leading-[120%] text-[24px] font-[500]">${btc}</h1>
+              <div className="flex items-center">
                 <RedDown />
-                <p className='text-[#DC3545] leading-[150%] text-[16px]'>-2%</p>
+                <p className="text-[#DC3545] leading-[150%] text-[16px]">-2%</p>
               </div>
             </div>
           </div>
         </div>
-        <div className='max-w-[1296px] w-full mx-auto flex justify-between py-6'>
-          <div className='flex gap-6  px-3  items-center'>
-            <h1 className='font-[500] text-[24px] leading-[120%]'>{distributors} Distributors</h1>
-            <button className='bg-[#0D6EFD] rounded-[4px] border border-[#0D6EFD] py-2 px-3'>+ Add Distributor</button>
+        <div className="max-w-[1296px] w-full mx-auto flex justify-between py-6">
+          <div className="flex gap-6  px-3  items-center">
+            <h1 className="font-[500] text-[24px] leading-[120%]">
+              {distributors} Distributors
+            </h1>
+            <button className="bg-[#0D6EFD] rounded-[4px] border border-[#0D6EFD] py-2 px-3">
+              + Add Distributor
+            </button>
           </div>
           <div className="flex border-[#495057] border items-center rounded-md  bg-[#343A40] px-4 py-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 mr-2 text-[#6C757D]">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-4 h-4 mr-2 text-[#6C757D]"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
             </svg>
             <input
               type="text"
@@ -135,8 +162,17 @@ function Home() {
               className="w-full bg-transparent placeholder:text-[#6C757D] focus:outline-none"
             />
             <button className="text-gray-500 focus:outline-none">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-[#F8F9FA]">
-                <path fillRule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clipRule="evenodd" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-4 h-4 text-[#F8F9FA]"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"
+                  clipRule="evenodd"
+                />
               </svg>
             </button>
           </div>
@@ -221,11 +257,21 @@ function Home() {
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
               <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
-                  <th scope="col" class="px-4 py-3">Name</th>
-                  <th scope="col" class="px-4 py-3">Volume</th>
-                  <th scope="col" class="px-4 py-3">Earned</th>
-                  <th scope="col" class="px-4 py-3">ComCut</th>
-                  <th scope="col" class="px-4 py-3">last updated</th>
+                  <th scope="col" class="px-4 py-3">
+                    Name
+                  </th>
+                  <th scope="col" class="px-4 py-3">
+                    Volume
+                  </th>
+                  <th scope="col" class="px-4 py-3">
+                    Earned
+                  </th>
+                  <th scope="col" class="px-4 py-3">
+                    ComCut
+                  </th>
+                  <th scope="col" class="px-4 py-3">
+                    last updated
+                  </th>
                   <th scope="col" class="px-4 py-3">
                     <span class="sr-only">Actions</span>
                   </th>
@@ -233,7 +279,7 @@ function Home() {
               </thead>
               <tbody>
                 {data.map((item, index) => {
-                  return <TableRow key={index} data={item} />
+                  return <TableRow key={index} data={item} />;
                 })}
               </tbody>
             </table>
@@ -283,6 +329,6 @@ function Home() {
       </div>
     </React.Fragment>
   );
-};
+}
 
 export default Home;
