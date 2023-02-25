@@ -21,7 +21,7 @@ $ pnpx create-nextron-app my-app --example basic-javascript
 $ cd my-app
 
 # using yarn or npm
-$ yarn (or `npm install`)
+$ npm install (or `yarn`)
 
 # using pnpm
 $ pnpm install --shamefully-hoist
@@ -31,8 +31,22 @@ $ pnpm install --shamefully-hoist
 
 ```
 # development mode
-$ yarn dev (or `npm run dev` or `pnpm run dev`)
+
+$ npm run dev (or `yarn dev` or `pnpm run dev`)
 
 # production build
-$ yarn build (or `npm run build` or `pnpm run build`)
+
+$ npm run build (or `yarn build` or `pnpm run build`)
+
+# build options
+
+$ npm run build:all (or `yarn build:all` or `pnpm run build:all`)
+
+$ npm run build:win32 (or `yarn build:win32` or `pnpm run build:win32`)
+
+$ npm run build:win64 (or `yarn build:win64` or `pnpm run build:win64`)
+
+$ npm run build:mac (or `yarn build:mac` or `pnpm run build:linux`)
+
+$ npm run build:linux (or `yarn build:linux` or `pnpm run build:linux`)
 ```
