@@ -15,7 +15,7 @@ const Header = () => {
       <nav className="flex justify-between px-3 py-3">
         <div className="flex items-center gap-[32px]">
           <Link href="/home">
-            <div className="italic font-[700] text-[20px] leading-[150%]">
+            <div className="italic font-[700] text-[20px] leading-[150%] cursor-pointer">
               freqtradebot
             </div>
           </Link>
