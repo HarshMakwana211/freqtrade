@@ -2,6 +2,7 @@ import { Button, Dropdown, Space } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import Link from "next/link";
+import { signIn, useSession, signOut } from "next-auth/react";
 
 const Header = () => {
   const [showCurreny, setShowCurreny] = useState(false);
@@ -10,6 +11,7 @@ const Header = () => {
   const [time, setTime] = useState("24 Hours");
   const items = ["$ USD", "₹ INR", "AED"];
   const times = ["24 Hours", "7 Days", "Month", "Year", "5 Years"];
+  const { session } = useSession();
   return (
     <>
       <nav className="flex justify-between px-3 py-3">
@@ -23,8 +25,27 @@ const Header = () => {
           <p className="text-[16px] leading-[150%] text-[#A0A0A0]">Github</p>
         </div>
         <div className="relative flex gap-2">
+          {session ? (
+            <>
+              <button
+                className="py-2 px-3 bg-[#DC3545] rounded"
+                onClick={() => signOut()}
+              >
+                Sign out
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                className="py-2 px-3 flex items-center justify-center gap-2 bg-[#0D6EFD] rounded mr-2"
+                onClick={() => signIn()}
+              >
+                Sign in
+              </button>
+            </>
+          )}
           <div
-            className="flex px-[13px] py-[5px] items-center gap-[16px] border cursor-pointer border-gray-600 rounded-[4px]"
+            className="flex px-[13px] py-[5px] items-center gap-[16px] border cursor-pointer border-gray-600 rounded-[4px] mr-2"
             onClick={(e) => {
               e.preventDefault();
               setShowCurreny(!showCurreny);

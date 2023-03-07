@@ -3,7 +3,7 @@ import Greenup from "../icons/Greenup";
 import RedDown from "../icons/reddown";
 
 const TableRow = ({ data }) => {
-  console.log(data);
+  // console.log(data);
   return (
     <tr class="border-b dark:border-gray-700">
       <th
