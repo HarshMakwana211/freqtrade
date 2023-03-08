@@ -25,7 +25,7 @@ const Header = () => {
           <p className="text-[16px] leading-[150%] text-[#A0A0A0]">Github</p>
         </div>
         <div className="relative flex gap-2">
-          {session ? (
+          {/* {session ? (
             <>
               <button
                 className="py-2 px-3 bg-[#DC3545] rounded"
@@ -43,7 +43,7 @@ const Header = () => {
                 Sign in
               </button>
             </>
-          )}
+          )} */}
           <div
             className="flex px-[13px] py-[5px] items-center gap-[16px] border cursor-pointer border-gray-600 rounded-[4px] mr-2"
             onClick={(e) => {
