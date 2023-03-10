@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Card from "../components/Card";
+import AddUser from "../components/addUser";
 
 function Edit() {
   const data = [
@@ -30,6 +31,9 @@ function Edit() {
       lastUpdated: "Last Updated: 22 Jan 2023",
     },
   ];
+
+  const [show, setShow] = useState(false);
+
   return (
     <>
       <div className="px-16 py-8">
@@ -38,7 +42,10 @@ function Edit() {
             <h1 className="font-[500] text-[24px] leading-[120%]">
               2 Distributors
             </h1>
-            <button className="bg-[#0D6EFD] rounded-[4px] border border-[#0D6EFD] py-2 px-3">
+            <button
+              className="bg-[#0D6EFD] rounded-[4px] border border-[#0D6EFD] py-2 px-3"
+              onClick={() => setShow(!show)}
+            >
               + Add Distributor
             </button>
           </div>
@@ -53,6 +60,9 @@ function Edit() {
             return <Card key={index} data={item} />;
           })}
         </div>
+      </div>
+      <div className={`${show ? "block" : "hidden"}`}>
+        <AddUser />
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import Head from "next/head";
 import Greenup from "../components/icons/Greenup";
 import RedDown from "../components/icons/reddown";
 import TableRow from "../components/TableRow";
+import { exec } from 'child_process';
 
 function Home() {
   const [volume, setVolume] = useState("20,000");
@@ -72,8 +73,20 @@ function Home() {
       lastUpdated: "20 Feb 2023",
     },
   ];
+
+  const handleClick = () => {
+    exec('code .', (error, stdout, stderr) => {
+      if (error) {
+        console.error(`exec error: ${error}`);
+        return;
+      }
+      console.log(`stdout: ${stdout}`);
+      // console.error(`stderr: ${stderr}`);
+    });
+  };
+
   return (
-    <React.Fragment>
+    <>
       <Head>
         <title>freqtradebot</title>
       </Head>
@@ -324,10 +337,11 @@ function Home() {
                 </a>
               </li>
             </ul>
-          </nav> */}a
+          </nav> */}
         </div>
+        <button onClick={handleClick}>Run CMD Command</button>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 
