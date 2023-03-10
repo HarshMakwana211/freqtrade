@@ -27,7 +27,7 @@ const SignIn = (props) => {
             Login
           </h1>
           <input
-            className="py-2 px-3 w-[100%] leading-[120%] text-[1.1rem] font-[500] text-center bg-[#212529] rounded"
+            className="py-2 px-3 w-[100%] leading-[120%] text-[1.1rem] font-[500] text-center bg-[#212529] rounded border border-solid border-[#CED4DA]"
             value={userInfo.email}
             onChange={({ target }) =>
               setUserInfo({ ...userInfo, email: target.value })
@@ -36,7 +36,7 @@ const SignIn = (props) => {
             placeholder="john@email.com"
           />
           <input
-            className="py-2 px-3 w-[100%] leading-[120%] text-[1.1rem] font-[500] text-center bg-[#212529] rounded"
+            className="py-2 px-3 w-[100%] leading-[120%] text-[1.1rem] font-[500] text-center bg-[#212529] rounded border border-solid border-[#CED4DA]"
             value={userInfo.password}
             onChange={({ target }) =>
               setUserInfo({ ...userInfo, password: target.value })

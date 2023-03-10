@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Card from "../components/Card";
@@ -31,7 +31,7 @@ function Edit() {
     },
   ];
   return (
-    <React.Fragment>
+    <>
       <div className="px-16 py-8">
         <div className="flex">
           <div className="flex gap-6  px-3 mb-12 items-center">
@@ -54,7 +54,7 @@ function Edit() {
           })}
         </div>
       </div>
-    </React.Fragment>
+    </>
   );
 }
 

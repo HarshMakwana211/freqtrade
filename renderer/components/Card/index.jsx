@@ -10,12 +10,12 @@ const Card = ({ data }) => {
             Distributor
           </span>
           <h1 className="leading-[120%] text-[1.5rem] font-[500]">
-            {data.name}
+            {data.name ? data.name : "NA"}
           </h1>
         </div>
         <div className="">
           <div className="font-[700] mb-1 text-[1rem] leading-[150%] text-[#6C757D]">
-            {data.addOn}
+            {data.addOn ? data.addOn : "NA"}
           </div>
         </div>
       </div>
@@ -27,7 +27,7 @@ const Card = ({ data }) => {
                 Binance ID
               </span>
               <span className="leading-[120%] text-[1.1rem] font-[500]">
-                {data.info.binance}
+                {data.info.binance ? data.info.binance : "NA"}
               </span>
             </div>
             <div className="flex gap-2 p-[0.2]">
@@ -35,7 +35,7 @@ const Card = ({ data }) => {
                 Telegram ID
               </span>
               <span className="leading-[120%] text-[1.1rem] font-[500]">
-                {data.info.telegram}
+                {data.info.telegram ? data.info.telegram : "NA"}
               </span>
             </div>
           </div>
@@ -45,7 +45,7 @@ const Card = ({ data }) => {
                 App ID
               </span>
               <span className="leading-[120%] text-[1.1rem] font-[500]">
-                {data.info.appId}
+                {data.info.appId ? data.info.appId : "NA"}
               </span>
             </div>
             <div className="flex gap-2 mb-1 p-[0.2]">
@@ -53,7 +53,7 @@ const Card = ({ data }) => {
                 App Password
               </span>
               <span className="leading-[120%] text-[1.1rem] font-[500]">
-                {data.info.password}
+                {data.info.password ? data.info.password : "NA"}
               </span>
             </div>
           </div>
@@ -77,11 +77,11 @@ const Card = ({ data }) => {
               CommCut%
             </span>
             <div className="flex gap-1">
-              <div className="{s.input}">
+              <div className="">
                 <input
                   type="text"
-                  className="py-2 px-3 w-[100%] leading-[120%] text-[1.1rem] font-[500] text-center bg-[#212529] rounded"
-                  value={data.comcut}
+                  className="py-2 px-3 w-[100%] leading-[120%] text-[1.1rem] font-[500] text-center bg-[#212529] rounded border border-solid border-[#CED4DA]"
+                  value={data.comcut ? data.comcut : "NA"}
                 />
               </div>
               <div className="{s.btn}">
@@ -92,7 +92,7 @@ const Card = ({ data }) => {
               </div>
             </div>
             <span className="font-[700] mb-1 text-[1rem] leading-[150%] text-[#6C757D]">
-              {data.lastUpdated}
+              {data.lastUpdated ? data.lastUpdated : "NA"}
             </span>
           </div>
         </div>
